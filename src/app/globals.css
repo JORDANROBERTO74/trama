@@ -1,0 +1,172 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@theme inline {
+  --color-bone: var(--bone);
+  --color-ink: var(--ink);
+  --color-graphite: var(--graphite);
+  --color-signal: var(--signal);
+  --color-signal-soft: var(--signal-soft);
+  --color-slate: var(--slate);
+  --color-line: var(--line);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --font-sans: var(--font-brand), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-brand-mono), ui-monospace, SFMono-Regular, monospace;
+
+  --text-display: clamp(2.5rem, 5vw, 4.25rem);
+  --text-display--line-height: 1.02;
+  --text-display--letter-spacing: -0.03em;
+  --text-section: clamp(1.875rem, 3.4vw, 2.875rem);
+  --text-section--line-height: 1.1;
+  --text-section--letter-spacing: -0.02em;
+  --text-eyebrow: 0.6875rem;
+  --text-eyebrow--line-height: 1.2;
+  --text-eyebrow--letter-spacing: 0.14em;
+
+  --spacing-section-padding: clamp(3.5rem, 6vw, 5.75rem);
+}
+
+@layer base {
+  :root {
+    --bone: #f6f5f0;
+    --ink: #0b0d12;
+    --graphite: #14171f;
+    --signal: #2f46ff;
+    --signal-soft: #e6e8ff;
+    --slate: #5b6170;
+    --line: #dcdad2;
+    --surface: #ecebe4;
+    --surface-2: #e2e0d7;
+
+    --background: 44 33% 96%;
+    --foreground: 222 24% 6%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 24% 6%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 24% 6%;
+    --primary: 232 100% 59%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 44 18% 91%;
+    --secondary-foreground: 222 24% 6%;
+    --muted: 44 18% 91%;
+    --muted-foreground: 220 8% 40%;
+    --accent: 232 100% 95%;
+    --accent-foreground: 232 100% 30%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 45 12% 84%;
+    --input: 45 12% 84%;
+    --ring: 232 100% 59%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-bone text-ink antialiased overflow-x-hidden;
+  }
+
+  ::selection {
+    background: var(--signal);
+    color: #ffffff;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--signal);
+    outline-offset: 3px;
+  }
+
+  [id] {
+    scroll-margin-top: 5rem;
+  }
+}
+
+@layer utilities {
+  .marquee-fade {
+    mask-image: linear-gradient(
+      to right,
+      transparent,
+      black 8%,
+      black 92%,
+      transparent
+    );
+    -webkit-mask-image: linear-gradient(
+      to right,
+      transparent,
+      black 8%,
+      black 92%,
+      transparent
+    );
+  }
+
+  .hero-gradient {
+    background: linear-gradient(
+      165deg,
+      #f8f7f3 0%,
+      #f6f5f0 35%,
+      #edecf6 70%,
+      #e9e8f2 100%
+    );
+  }
+
+  .hero-gradient-animated {
+    background: linear-gradient(-45deg, #f8f7f3, #f6f5f0, #eae9f4, #f0f0ea);
+    background-size: 400% 400%;
+    animation: heroShift 18s ease infinite;
+  }
+
+  .bg-brand-gradient {
+    background: linear-gradient(to right, var(--signal), #7b8cff);
+  }
+
+  .glass-panel {
+    @apply rounded-2xl border border-white/20 bg-white/10 backdrop-blur-md;
+  }
+
+  .bg-dot-grid {
+    background-color: #eeece5;
+    background-image: radial-gradient(circle, #cbcfd9 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+}
+
+@keyframes heroShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-gradient-animated {
+    animation: none;
+  }
+}
