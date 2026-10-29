@@ -39,7 +39,7 @@ export default async function Image({
               display: "flex",
               width: "22px",
               height: "22px",
-              background: "#2f46ff",
+              background: "#547243",
             }}
           />
           <span

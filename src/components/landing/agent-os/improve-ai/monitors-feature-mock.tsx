@@ -7,7 +7,7 @@ export function MonitorsFeatureMock() {
           {[40, 55, 45, 70, 50].map((h, i) => (
             <div
               key={i}
-              className="flex-1 rounded-t bg-blue-200"
+              className="flex-1 rounded-t bg-signal/20"
               style={{ height: `${h}%` }}
             />
           ))}

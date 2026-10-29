@@ -10,7 +10,7 @@ export function ExperimentsFeatureMock() {
           <span className="text-slate/70">Schedule:</span> Event-driven
           automation
         </div>
-        <div className="rounded-xl border border-blue-100 bg-signal/10/80 px-3 py-2 text-[10px] text-slate">
+        <div className="rounded-xl border border-signal/20 bg-signal/10/80 px-3 py-2 text-[10px] text-slate">
           <span className="text-signal">Deploy:</span> Manual run on demand —
           guardrails active
         </div>

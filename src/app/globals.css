@@ -53,8 +53,8 @@
     --bone: #f6f5f0;
     --ink: #0b0d12;
     --graphite: #14171f;
-    --signal: #2f46ff;
-    --signal-soft: #e6e8ff;
+    --signal: #547243;
+    --signal-soft: #e8eee1;
     --slate: #5b6170;
     --line: #dcdad2;
     --surface: #ecebe4;
@@ -66,19 +66,19 @@
     --card-foreground: 222 24% 6%;
     --popover: 0 0% 100%;
     --popover-foreground: 222 24% 6%;
-    --primary: 232 100% 59%;
+    --primary: 98 26% 35%;
     --primary-foreground: 0 0% 100%;
     --secondary: 44 18% 91%;
     --secondary-foreground: 222 24% 6%;
     --muted: 44 18% 91%;
     --muted-foreground: 220 8% 40%;
-    --accent: 232 100% 95%;
-    --accent-foreground: 232 100% 30%;
+    --accent: 98 24% 92%;
+    --accent-foreground: 98 28% 22%;
     --destructive: 0 72% 51%;
     --destructive-foreground: 0 0% 100%;
     --border: 45 12% 84%;
     --input: 45 12% 84%;
-    --ring: 232 100% 59%;
+    --ring: 98 26% 35%;
   }
 
   * {
@@ -127,19 +127,19 @@
       165deg,
       #f8f7f3 0%,
       #f6f5f0 35%,
-      #edecf6 70%,
-      #e9e8f2 100%
+      #edf0e7 70%,
+      #e7ecdf 100%
     );
   }
 
   .hero-gradient-animated {
-    background: linear-gradient(-45deg, #f8f7f3, #f6f5f0, #eae9f4, #f0f0ea);
+    background: linear-gradient(-45deg, #f8f7f3, #f6f5f0, #e9eee2, #f0f0ea);
     background-size: 400% 400%;
     animation: heroShift 18s ease infinite;
   }
 
   .bg-brand-gradient {
-    background: linear-gradient(to right, var(--signal), #7b8cff);
+    background: linear-gradient(to right, var(--signal), #8ba877);
   }
 
   .glass-panel {

@@ -5,7 +5,7 @@ export function ProactiveEngagementFeatureMock() {
         <p className="font-medium text-ink">High-risk step</p>
         <p className="text-slate">Paused for human approval</p>
       </div>
-      <div className="rounded-lg border border-blue-100 bg-signal/10/80 px-2.5 py-2 text-[10px] text-slate">
+      <div className="rounded-lg border border-signal/20 bg-signal/10/80 px-2.5 py-2 text-[10px] text-slate">
         <span className="text-signal">Governance:</span> Every decision logged;
         patterns improve the next run.
       </div>

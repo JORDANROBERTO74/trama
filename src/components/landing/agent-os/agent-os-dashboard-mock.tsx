@@ -21,7 +21,7 @@ function BrandMark() {
 }
 
 function Sparkline({ positive = true }: { positive?: boolean }) {
-  const stroke = positive ? "#2f46ff" : "#9aa1ad";
+  const stroke = positive ? "var(--signal)" : "#9aa1ad";
   const points = positive
     ? "0,20 12,14 24,10 36,6 48,4"
     : "0,6 12,10 24,14 36,16 48,18";
@@ -37,8 +37,8 @@ function AreaChart() {
     <svg viewBox="0 0 200 80" className="mt-3 h-24 w-full">
       <defs>
         <linearGradient id="areaSignal" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stopColor="#2f46ff" stopOpacity="0.28" />
-          <stop offset="100%" stopColor="#2f46ff" stopOpacity="0" />
+          <stop offset="0%" stopColor="var(--signal)" stopOpacity="0.28" />
+          <stop offset="100%" stopColor="var(--signal)" stopOpacity="0" />
         </linearGradient>
       </defs>
       <path
@@ -47,7 +47,7 @@ function AreaChart() {
       />
       <polyline
         fill="none"
-        stroke="#2f46ff"
+        stroke="var(--signal)"
         strokeWidth="2"
         points="0,70 30,58 60,52 90,38 120,32 150,22 180,14 200,8"
       />
