@@ -51,3 +51,8 @@ The following content was present in the source and does not exist in this repos
 - `[locale]/[...rest]` renders the styled 404 for unknown paths.
 - `pnpm typecheck`, `pnpm lint` and `pnpm build` complete without errors or warnings.
 - `robots.txt`, multilingual `sitemap.xml`, `hreflang` alternates and a generated 1200×630 OpenGraph card are in place.
+
+## License note
+
+This repository contains derivative work. The license covers only the original
+contributions of the copyright holder. See [LICENSE](../LICENSE).
